@@ -1,44 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.4/dist/mindar-image.prod.js"></script>
-  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-</head>
+<body style="background:black;color:white;text-align:center;">
 
-<body>
-  <a-scene 
-    mindar-image="imageTargetSrc: targets.mind;"
-    vr-mode-ui="enabled: false"
-    device-orientation-permission-ui="enabled: false"
-    embedded
-    color-space="sRGB"
-    renderer="colorManagement: true; physicallyCorrectLights"
-  >
-    <a-assets>
-      <video 
-        id="vid"
-        src="Video.mp4"
-        autoplay
-        loop
-        muted
-        playsinline
-        webkit-playsinline
-        crossorigin="anonymous">
-      </video>
-    </a-assets>
+<h1>VIDEO TEST</h1>
 
-    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+<video
+  src="https://shimajanian73-boop.github.io/Test3/Video.mp4"
+  width="320"
+  controls
+  autoplay
+  muted
+  playsinline>
+</video>
 
-    <a-entity mindar-image-target="targetIndex: 0">
-      <a-video 
-        src="#vid"
-        width="1"
-        height="0.6"
-        position="0 0 0">
-      </a-video>
-    </a-entity>
-
-  </a-scene>
 </body>
 </html>
